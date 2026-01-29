@@ -71,7 +71,7 @@ ai-agent-resilience/
 ├── config.py           # Configuration (Thresholds, API Keys)
 ├── requirements.txt    # Dependencies
 └── README.md           # Documentation
-
+```
 ## 📊 Evidence & Logs
 
 ### 1. Circuit Breaker & Alerts (Terminal)
