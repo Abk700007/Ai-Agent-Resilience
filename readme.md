@@ -77,4 +77,4 @@ ai-agent-resilience/
 
 Below is a screenshot of the system handling a circuit trip and triggering alerts:
 
-![System Logs and Alerts](screenshots/Terminal_1.png)
+![System Logs and Alerts](Screenshots/Terminal_1.png)
