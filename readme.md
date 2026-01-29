@@ -88,4 +88,4 @@ ai-agent-resilience/
 | :---: | :---: |
 | ![File Logs](Screenshots/Filelogs.png) | ![Google Sheets](Screenshots/Googlesheetlogs.png) |
 
-### Submitted By Abiranjan Kumar
+### Submitted By Abhiranjan Kumar
