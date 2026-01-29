@@ -75,6 +75,14 @@ ai-agent-resilience/
 ```
 ## 📊 Example Logs (Simulation Run)
 
-Below is a screenshot of the system handling a circuit trip and triggering alerts:
+Below are screenshot of the system handling a circuit trip and triggering alerts:
 
 ![System Logs and Alerts](Screenshots/Terminal_1.png)
+![System Logs and Alerts](Screenshots/Terminal_2.png)
+![System Logs and Alerts](Screenshots/Terminal_3.png)
+File Logs
+![System Logs and Alerts](Screenshots/Filelogs.png)
+Google sheet logs
+![System Logs and Alerts](Screenshots/Googlesheetlogs.png)
+
+
