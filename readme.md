@@ -36,7 +36,7 @@ Every API exception is caught and analyzed:
 * *Why?* This prevents spamming a struggling server and gives it time to recover.
 
 ### 3. Circuit Breaker Pattern
-To preventing cascading failures, the Circuit Breaker monitors the health of the service:
+To prevent cascading failures, the Circuit Breaker monitors the health of the service:
 * **CLOSED (Green):** Normal operation. Calls go through.
 * **OPEN (Red):** Triggered after **3 consecutive failures**. All future calls are immediately blocked (Graceful Degradation) to save resources.
 * **HALF-OPEN (Yellow):** After a cooldown (10s), one test request is allowed through. If successful, the circuit resets to CLOSED.
@@ -65,24 +65,25 @@ ai-agent-resilience/
 │   ├── services.py     # Mock Service (Simulates 503/401 errors)
 │   ├── logger.py       # Google Sheets & File Logging
 │   ├── exceptions.py   # Custom Error Classes
-│ 
+├── alert.py        # Notification System
 ├── logs/
 │   └── agent_activity.log
 ├── config.py           # Configuration (Thresholds, API Keys)
 ├── requirements.txt    # Dependencies
-├── src
 └── README.md           # Documentation
-```
-## 📊 Example Logs (Simulation Run)
 
-Below are screenshot of the system handling a circuit trip and triggering alerts:
+## 📊 Evidence & Logs
 
-![System Logs and Alerts](Screenshots/Terminal_1.png)
-![System Logs and Alerts](Screenshots/Terminal_2.png)
-![System Logs and Alerts](Screenshots/Terminal_3.png)
-File Logs
-![System Logs and Alerts](Screenshots/Filelogs.png)
-Google sheet logs
-![System Logs and Alerts](Screenshots/Googlesheetlogs.png)
+### 1. Circuit Breaker & Alerts (Terminal)
+*The system detects repeated failures, trips the circuit, triggers alerts, and recovers automatically.*
 
+| Phase 1: Retry Logic | Phase 2: Alerts Triggered | Phase 3: Recovery |
+| :---: | :---: | :---: |
+| ![Retry Logic](Screenshots/Terminal_1.png) | ![Alerts Triggered](Screenshots/Terminal_2.png) | ![Recovery](Screenshots/Terminal_3.png) |
 
+### 2. Persistent Logging
+*Audit trails are maintained in both local files and Google Sheets.*
+
+| **Local File Logs (`agent_activity.log`)** | **Google Sheets Real-Time Dashboard** |
+| :---: | :---: |
+| ![File Logs](Screenshots/Filelogs.png) | ![Google Sheets](Screenshots/Googlesheetlogs.png) |
